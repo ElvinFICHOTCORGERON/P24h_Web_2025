@@ -19,12 +19,15 @@ export const useDossierStore = defineStore("dossier", {
   }),
   actions: {
     async fetchDossiers() {
+      const baseURL = import.meta.env.DEV
+        ? "/api-dossier"
+        : "https://api.24h.etiq-dijon.fr";
       const urls = [
-        "/api-dossier/Beta-343743bb-3f66/P38aaRcQc8WXBmqwsbH",
-        "/api-dossier/Beta-343743bb-3f66/gXoBSmVp8GygXalJADxu",
-        "/api-dossier/Beta-343743bb-3f66/NAdRyI9h7FEQwiD56m3d",
-        "/api-dossier/Beta-343743bb-3f66/bcqtfwf0YI0ix4g38g9L",
-        "/api-dossier/Beta-343743bb-3f66/Xp5Rb7FzTLsRjbZ0IRak",
+        `${baseURL}/Beta-343743bb-3f66/P38aaRcQc8WXBmqwsbH`,
+        `${baseURL}/Beta-343743bb-3f66/gXoBSmVp8GygXalJADxu`,
+        `${baseURL}/Beta-343743bb-3f66/NAdRyI9h7FEQwiD56m3d`,
+        `${baseURL}/Beta-343743bb-3f66/bcqtfwf0YI0ix4g38g9L`,
+        `${baseURL}/Beta-343743bb-3f66/Xp5Rb7FzTLsRjbZ0IRak`,
       ];
 
       try {

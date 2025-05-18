@@ -13,6 +13,9 @@ export const useAuthStore = defineStore("auth", {
       this.loading = true;
       this.error = null;
 
+      const baseURL = import.meta.env.DEV
+        ? "/api-auth"
+        : "https://api24h.82.29.175.123.nip.io";
       const guildId = "Beta-b915c7d7-11c3";
 
       try {
