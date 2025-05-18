@@ -20,7 +20,7 @@ export const useAuthStore = defineStore("auth", {
 
       try {
         const response = await fetch(
-          `/api-auth/intra/info/authentification/${guildId}`,
+          `${baseURL}/intra/info/authentification/${guildId}`,
           {
             method: "POST",
             headers: {
