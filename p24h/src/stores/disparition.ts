@@ -19,9 +19,8 @@ export const useDossierStore = defineStore("dossier", {
   }),
   actions: {
     async fetchDossiers() {
-      const baseURL = import.meta.env.DEV
-        ? "/api-dossier"
-        : "https://api.24h.etiq-dijon.fr";
+      const baseURL = "/api/dossier"; // Toujours utiliser le proxy (Vercel gère DEV et PROD)
+
       const urls = [
         `${baseURL}/Beta-343743bb-3f66/P38aaRcQc8WXBmqwsbH`,
         `${baseURL}/Beta-343743bb-3f66/gXoBSmVp8GygXalJADxu`,
